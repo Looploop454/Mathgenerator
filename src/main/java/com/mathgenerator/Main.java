@@ -16,6 +16,7 @@ public class Main extends Application<ApplicationConfiguration> {
         environment.jersey().register(new LoginController());
         environment.jersey().register(new GuessGameController());
         environment.jersey().register(new MathQuestionController());
+        environment.jersey().register(new QuestionGradeController());
     }
 
     @Override

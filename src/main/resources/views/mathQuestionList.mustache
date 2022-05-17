@@ -6,14 +6,17 @@
 <body>
     <div>Hello World!</div>
     <div>
-        <form>
+        <form action="/grade" method="post">
             {{#questionList}}
-               {{num1}}{{operator}}{{num2}}=<input type="text" name="answer"/>
-                <input type="hidden" value="{{num1}}" name="num1"/>
-                <input type="hidden" value="{{num2}}" name="num2"/>
-                <input type="hidden" value="{{operator}}" name="opt"/>
-                <br>
+                <div>
+                   {{num1}}{{operator}}{{num2}}=<input type="text" name="answer"/>
+                    <input type="hidden" value="{{num1}}" name="num1"/>
+                    <input type="hidden" value="{{num2}}" name="num2"/>
+                    <input type="hidden" value="{{operator}}" name="opt"/>
+                    <br>
+                </div>
             {{/questionList}}
+                <input type="submit">
         </form>
 
 
