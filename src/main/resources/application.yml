@@ -1,0 +1,5 @@
+viewRendererCOnfiguration:
+  mustache:
+    cache:false
+
+projectName: MathGenerator

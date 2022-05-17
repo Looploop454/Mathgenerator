@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <div>Hello World!</div>
+    <div>
+        <form>
+            {{#questionList}}
+               {{num1}}{{operator}}{{num2}}=<input type="text" name="answer"/>
+                <input type="hidden" value="{{num1}}" name="num1"/>
+                <input type="hidden" value="{{num2}}" name="num2"/>
+                <input type="hidden" value="{{operator}}" name="opt"/>
+                <br>
+            {{/questionList}}
+        </form>
+
+
+    </div>
+</body>
+</html>
