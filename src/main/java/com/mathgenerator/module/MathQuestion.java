@@ -2,15 +2,27 @@ package com.mathgenerator.module;
 
 import com.mathgenerator.view.MathQuestionListView;
 
+import java.util.function.Function;
+
 public class MathQuestion {
+    private int id;
     private int num1;
     private int num2;
     private String operator;
 
     public MathQuestion(int num1, int num2, String operator){
+        this(0,num1,num2,operator);
+    }
+
+    public MathQuestion(int id, int num1, int num2, String operator){
+        this.id=id;
         this.num1=num1;
         this.num2=num2;
         this.operator=operator;
+    }
+
+    public int getId(){
+        return id;
     }
 
     public int getNum1(){
@@ -22,6 +34,13 @@ public class MathQuestion {
     }
     public String getOperator(){
         return operator;
+    }
+
+    public Function<Object,Object> bgColor(){
+        return(Object obj)->{
+            int index=Integer.parseInt(obj.toString());
+            return index % 2 ==0?"white":"lightgrey";
+        };
     }
 
 }

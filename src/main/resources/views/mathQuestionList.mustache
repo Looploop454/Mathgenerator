@@ -8,11 +8,12 @@
     <div>
         <form action="/grade" method="post">
             {{#questionList}}
-                <div>
-                   {{num1}}{{operator}}{{num2}}=<input type="text" name="answer"/>
-                    <input type="hidden" value="{{num1}}" name="num1"/>
-                    <input type="hidden" value="{{num2}}" name="num2"/>
-                    <input type="hidden" value="{{operator}}" name="opt"/>
+
+                <div style="background-color:{{#bgColor}}{{id}}{{/bgColor}} ">
+                   {{num1}}{{operator}}{{num2}}=<input type="text" name="answer_{{id}}"/>
+                    <input type="hidden" value="{{num1}}" name="num1_{{id}}"/>
+                    <input type="hidden" value="{{num2}}" name="num2_{{id}}"/>
+                    <input type="hidden" value="{{operator}}" name="opt_{{id}}"/>
                     <br>
                 </div>
             {{/questionList}}

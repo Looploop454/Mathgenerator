@@ -13,4 +13,15 @@ public class MathQuestionListView extends View{
     public List<MathQuestion> getQuestionList(){
         return mathQuestionList;
     }
+
+    public Set<Map.Entry<Integer, MathQuestion>> getQuestionLIst2(){
+        Map<Integer,MathQuestion>map =new HashMap<>();
+        for(int i=0;i<mathQuestionList.size();i++){
+            map.put(i,mathQuestionList.get(i));
+        }return map.entrySet();
+    }
+
+    /*public getQuestionList2(){
+        Map<Integer, MathQuestion>={1:q1,}
+    }*/
 }

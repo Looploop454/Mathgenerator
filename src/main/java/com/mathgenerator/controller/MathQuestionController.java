@@ -9,10 +9,10 @@ import javax.ws.rs.*;
 public class MathQuestionController {
     @GET
     public View get(){
-       // return new MathQuestionListView("/views/mathQuestionList.mustache", new MathQuestion(5,6,"+"));
+
         List<MathQuestion> mathQuestionList=new ArrayList<>();
         for(int i=3;i<10;i++){
-            mathQuestionList.add(new MathQuestion(i,i+5,"+"));
+            mathQuestionList.add(new MathQuestion(i,i,i+5,"+"));
         }
 
         return new MathQuestionListView("/views/mathQuestionList.mustache",  mathQuestionList);
