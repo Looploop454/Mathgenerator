@@ -10,9 +10,9 @@ public class MathQuestion {
     private int num2;
     private String operator;
 
-    public MathQuestion(int num1, int num2, String operator){
-        this(0,num1,num2,operator);
-    }
+    //public MathQuestion(int id, int num1, int num2, String operator){
+     //   this(id,num1,num2,operator);
+  //  }
 
     public MathQuestion(int id, int num1, int num2, String operator){
         this.id=id;

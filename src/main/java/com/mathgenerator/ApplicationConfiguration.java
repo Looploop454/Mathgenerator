@@ -3,6 +3,7 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
+import io.dropwizard.db.DataSourceFactory;
 
 import javax.validation.constraints.NotNull;
 
@@ -21,5 +22,16 @@ public class ApplicationConfiguration extends Configuration{
     @JsonProperty("name")
     public String name(){
         return name;
+    }
+
+    private DataSourceFactory database=new DataSourceFactory();
+    @JsonProperty("database")
+    public DataSourceFactory getDataSourceFactory(){
+        return database;
+    }
+
+    @JsonProperty("database")
+    public void setDataSourceFactory(DataSourceFactory database){
+        this.database=database;
     }
 }

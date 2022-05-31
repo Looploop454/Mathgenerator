@@ -20,8 +20,4 @@ public class MathQuestionListView extends View{
             map.put(i,mathQuestionList.get(i));
         }return map.entrySet();
     }
-
-    /*public getQuestionList2(){
-        Map<Integer, MathQuestion>={1:q1,}
-    }*/
 }
